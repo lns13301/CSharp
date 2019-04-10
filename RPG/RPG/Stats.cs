@@ -14,36 +14,7 @@ namespace RPG
         public Stats(string uid)
         {
             this.uid = uid;
-            /*char comma = ',';
-            string[] statlist = File.ReadAllLines(@"C:\Users\DB\Desktop\코딩\TurnRPGData\statlist.txt");
-            string list = null;
-            foreach (string line in statlist)
-            {
-                list = list + line;
-            }
-            string[] datalist = list.Split(comma);
-            for (int i = 0; i < datalist.Length; i++)
-            {
-                if (i == datalist.Length - 1)
-                {
-                    Console.WriteLine("일치하는 계정데이터가 없습니다. 새로 생성합니다.");
-                    string[] writestat = { this.uid, "0", "50", "20", "0", "0", "0", "0", "0", "0", "1" };
-                    using (StreamWriter PlayerStats = new StreamWriter(@"C:\Users\DB\Desktop\코딩\TurnRPGData\statlist.txt", true))
-                    {
-                        PlayerStats.WriteLine();
-                        foreach (string line in writestat)
-                        {
-                            PlayerStats.Write(line + ",");
-                        }
-                    }
-                }
-                else if (datalist[i].Equals(uid))
-                {
-                    Console.WriteLine("이미 계정데이터가 존재합니다.");
-                    break;
-                }
-            }
-            Console.WriteLine("계정정보를 읽어옵니다.");*/
+            
             ReadStats();
         }
         public void WriteStats()
@@ -109,8 +80,6 @@ namespace RPG
                     }
                 }
             }
-
-            
             this.xp = int.Parse(datalist[1]);
             this.hp = int.Parse(datalist[2]);
             this.mp = int.Parse(datalist[3]);

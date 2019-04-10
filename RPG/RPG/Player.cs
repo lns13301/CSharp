@@ -8,18 +8,22 @@ namespace RPG
 {
     class Player
     {
-        private Stats stats;       
+        private Stats stats;
+        private Inventory inventory;
+
         public Player(string uid)
         {
-            Console.WriteLine("여기");
             stats = new Stats(uid);
-            Console.WriteLine("여기2");
+            inventory = new Inventory(uid);
         }
 
         public Stats get_stats()
         {
-            Console.WriteLine("여기3");
             return this.stats;
+        }
+        public Inventory get_inventory()
+        {
+            return this.inventory;
         }
     }
 }

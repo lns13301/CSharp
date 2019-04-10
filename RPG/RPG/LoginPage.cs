@@ -104,7 +104,7 @@ namespace RPG
             pw2 = Console.ReadLine();
             if (id.Length < 4 || pw.Length < 4)
             {
-                Console.WriteLine("\n너무짧소.");
+                Console.WriteLine("\n아이디/비밀번호를 최소 4개 이상 입력하시오.");
                 Console.WriteLine("계속하려면 아무키나 누르시오.");
                 string select2 = Console.ReadLine();
                 return 2;
