@@ -1,0 +1,7 @@
+C:\Users\DB\source\repos\EXCERCISE\EXCERCISE\bin\Debug\EXCERCISE.exe.config
+C:\Users\DB\source\repos\EXCERCISE\EXCERCISE\bin\Debug\EXCERCISE.exe
+C:\Users\DB\source\repos\EXCERCISE\EXCERCISE\bin\Debug\EXCERCISE.pdb
+C:\Users\DB\source\repos\EXCERCISE\EXCERCISE\obj\Debug\EXCERCISE.csprojAssemblyReference.cache
+C:\Users\DB\source\repos\EXCERCISE\EXCERCISE\obj\Debug\EXCERCISE.csproj.CoreCompileInputs.cache
+C:\Users\DB\source\repos\EXCERCISE\EXCERCISE\obj\Debug\EXCERCISE.exe
+C:\Users\DB\source\repos\EXCERCISE\EXCERCISE\obj\Debug\EXCERCISE.pdb
