@@ -33,13 +33,6 @@ namespace EXCERCISE
     }
     class SalesPerson : Employee
     {
-        public override void employee(string name, string gender, string age, string group) // 기반클래스의 메소드를 상속받아 기반클래스 필드 값 설정
-        {
-            base.name = name;
-            base.gender = gender;
-            base.age = age;
-            base.group = group;
-        }
         public override void Print()
         {
             Console.WriteLine("영업직원입니다."); // 기반클래스 Print()메소드에 덮어씌운다.
