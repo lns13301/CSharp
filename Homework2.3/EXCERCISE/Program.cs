@@ -8,7 +8,7 @@ namespace EXCERCISE
 {
     class Employee
     {
-        protected string name, gender, age, group;
+        protected string name, gender, age, group; // 필드 값
 
         public virtual void employee(string name, string gender, string age, string group)
         {
@@ -49,8 +49,8 @@ namespace EXCERCISE
     {
         static void Main(string[] args)
         {
-            Employee emp = new Employee();
-            Employee spl = new SalesPerson();
+            Employee emp = new Employee(); // 인스턴스 생성
+            Employee spl = new SalesPerson(); // 인스턴스 생성
             string name, gender, age, group;
             Console.WriteLine("직원데이터를 입력하세요.");
             Console.WriteLine("(이름, 성별, 나이, 부서 순)\n");
