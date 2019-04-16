@@ -1,0 +1,7 @@
+C:\Users\DB\source\repos\RiverGame\RiverGame\bin\Debug\RiverGame.exe.config
+C:\Users\DB\source\repos\RiverGame\RiverGame\bin\Debug\RiverGame.exe
+C:\Users\DB\source\repos\RiverGame\RiverGame\bin\Debug\RiverGame.pdb
+C:\Users\DB\source\repos\RiverGame\RiverGame\obj\Debug\RiverGame.csprojAssemblyReference.cache
+C:\Users\DB\source\repos\RiverGame\RiverGame\obj\Debug\RiverGame.csproj.CoreCompileInputs.cache
+C:\Users\DB\source\repos\RiverGame\RiverGame\obj\Debug\RiverGame.exe
+C:\Users\DB\source\repos\RiverGame\RiverGame\obj\Debug\RiverGame.pdb
