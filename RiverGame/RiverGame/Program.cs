@@ -32,7 +32,7 @@ namespace RiverGame
         {
             if (po != mu)
             {
-                Console.WriteLine("살인자가 살인을 저질렀습니다!!");
+                Console.WriteLine("살인자가 도망을 쳤습니다!!");
                 return 1;
             }
             else if (fa != mo)
@@ -256,7 +256,7 @@ namespace RiverGame
             Console.WriteLine("8. 운전만 탑승");
 
             Console.WriteLine();
-            Console.Write("탐승자 선택 > ");
+            Console.Write("탑승자 선택 > ");
             string sct2 = Console.ReadLine();
 
             if(sct2.Equals("1") && po == 0)
@@ -367,7 +367,7 @@ namespace RiverGame
             Console.WriteLine("8. 운전만 탑승");
 
             Console.WriteLine();
-            Console.Write("탐승자 선택 > ");
+            Console.Write("탑승자 선택 > ");
             string sct2 = Console.ReadLine();
 
             if (sct2.Equals("1") && po == 1)
@@ -457,9 +457,9 @@ namespace RiverGame
             Console.WriteLine("강을 건너가자!!!\n");
             Console.WriteLine("!게임 규칙!\n");
             Console.WriteLine("(* 누구하나가 상처입으면 게임오버!!)");
-            Console.WriteLine("경찰이 없으면 살인자가 공격");
             Console.WriteLine("아빠가 없으면 엄마가 아들을 공격");
             Console.WriteLine("엄마가 없으면 아빠가 딸을 공격");
+            Console.WriteLine("경찰이 없으면 살인자가 도주!");
             Console.WriteLine("아무키나 눌러서 시작하기!");
             string tmp = Console.ReadLine();
             Boat b = new Boat();
