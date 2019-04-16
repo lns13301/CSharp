@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +9,7 @@ namespace RiverGame
     class Boat
     {
         private int boat_return;
-        private int po, mu, fa, mo, so, d1, d2, nobody;
+        private int po, mu, fa, mo, so, d1, d2;
 
         public Boat()
         {
@@ -20,7 +20,6 @@ namespace RiverGame
             this.so = 0;
             this.d1 = 0;
             this.d2 = 0;
-            this.nobody = 0;
             this.boat_return = 0;
         }
 
@@ -30,9 +29,9 @@ namespace RiverGame
         }
         public int boat()
         {
-            if (po != mu)
+            if (po != mu && (mu == fa || mu== mo || mu== so || mu == d1 || mu==d2))
             {
-                Console.WriteLine("살인자가 도망을 쳤습니다!!");
+                Console.WriteLine("살인자가 살인을 했습니다!");
                 return 1;
             }
             else if (fa != mo)
@@ -225,7 +224,7 @@ namespace RiverGame
         {
             Console.WriteLine("보트에 탑승할 사람을 선택하세요.\n");
 
-            if(po == 0)
+            if (po == 0)
             {
                 Console.WriteLine("1. 경찰    (운전가능)");
             }
@@ -253,13 +252,13 @@ namespace RiverGame
             {
                 Console.WriteLine("7. 둘째 딸");
             }
-            Console.WriteLine("8. 운전만 탑승");
+            Console.WriteLine("8. 운전자만 탑승");
 
             Console.WriteLine();
             Console.Write("탑승자 선택 > ");
             string sct2 = Console.ReadLine();
 
-            if(sct2.Equals("1") && po == 0)
+            if (sct2.Equals("1") && po == 0)
             {
                 this.po = 1;
             }
@@ -364,7 +363,7 @@ namespace RiverGame
             {
                 Console.WriteLine("7. 둘째 딸");
             }
-            Console.WriteLine("8. 운전만 탑승");
+            Console.WriteLine("8. 운전자만 탑승");
 
             Console.WriteLine();
             Console.Write("탑승자 선택 > ");
@@ -459,7 +458,7 @@ namespace RiverGame
             Console.WriteLine("(* 누구하나가 상처입으면 게임오버!!)");
             Console.WriteLine("아빠가 없으면 엄마가 아들을 공격");
             Console.WriteLine("엄마가 없으면 아빠가 딸을 공격");
-            Console.WriteLine("경찰이 없으면 살인자가 도주!");
+            Console.WriteLine("경찰이 없으면 살인자가 공격");
             Console.WriteLine("아무키나 눌러서 시작하기!");
             string tmp = Console.ReadLine();
             Boat b = new Boat();
@@ -487,7 +486,7 @@ namespace RiverGame
                     b.set_boat(0);
                 }
             }
-            if(gameresult == 1)
+            if (gameresult == 1)
             {
                 Console.WriteLine("게임 오버...\n");
             }
