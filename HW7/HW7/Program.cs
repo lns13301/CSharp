@@ -146,8 +146,10 @@ namespace HW7
                 string temp = Console.ReadLine();
                 return true;
             }
+            int times = 0;
             foreach (char i in inputdata_check)
             {
+                times++;
                 if (i == ' ' || inputdata.Equals(null))
                 {
                     Console.WriteLine("\n필드 값에 공백을 포함할 수 없습니다.");
@@ -155,38 +157,41 @@ namespace HW7
                     string temp = Console.ReadLine();
                     return true;
                 }
-                else if (inputdata.Length > 21 && inputdata.Length < 28)
+                else if (inputdata_check.Length.Equals(times))
                 {
-                    StreamWriter sw = new StreamWriter("userdata.txt", true); // 오류검사를 마치고 정상적인 값이 입력된 경우 파일에 작성
+                    if (inputdata.Length >21 && inputdata.Length < 31)
+                    {
+                        StreamWriter sw = new StreamWriter("userdata.txt", true); // 오류검사를 마치고 정상적인 값이 입력된 경우 파일에 작성
 
-                    sw.WriteLine(inputdata);
-                    sw.Close();
-                    string[] splited = inputdata.Split('#');
-                    try
-                    {
-                        int type_1 = int.Parse(splited[1]);
-                        float type_2 = float.Parse(splited[1]);
-                        float type_3 = float.Parse(splited[2]);
-                        float type_4 = float.Parse(splited[3]);
+                        sw.WriteLine(inputdata);
+                        sw.Close();
+                        string[] splited = inputdata.Split('#');
+                        try
+                        {
+                            int type_1 = int.Parse(splited[1]);
+                            float type_2 = float.Parse(splited[1]);
+                            float type_3 = float.Parse(splited[2]);
+                            float type_4 = float.Parse(splited[3]);
+                        }
+                        catch
+                        {
+                            Console.WriteLine("잘못된 값을 입력하였습니다.");
+                            string temp = Console.ReadLine();
+                            return true;
+                        }
+                        Console.WriteLine("레코드가 성공적으로 추가되었습니다.");
+                        table.Add(new DataTable(splited[0], int.Parse(splited[1]), float.Parse(splited[2]), float.Parse(splited[3]), float.Parse(splited[4])));
+                        string temp2 = Console.ReadLine();
+
+                        return true;
                     }
-                    catch
+                    else
                     {
-                        Console.WriteLine("잘못된 값을 입력하였습니다.");
+                        Console.WriteLine("\n필드 값에 입력된 값이 작거나 큽니다.");
+                        Console.WriteLine("계속하려면 엔터키를 누르시오.");
                         string temp = Console.ReadLine();
                         return true;
                     }
-                    Console.WriteLine("레코드가 성공적으로 추가되었습니다.");
-                    table.Add(new DataTable(splited[0], int.Parse(splited[1]), float.Parse(splited[2]), float.Parse(splited[3]), float.Parse(splited[4])));
-                    string temp2 = Console.ReadLine();
-
-                    return true;
-                }
-                else
-                {
-                    Console.WriteLine("\n필드 값에 입력된 값이 작습니다.");
-                    Console.WriteLine("계속하려면 엔터키를 누르시오.");
-                    string temp = Console.ReadLine();
-                    return true;
                 }
             }
             return true;
