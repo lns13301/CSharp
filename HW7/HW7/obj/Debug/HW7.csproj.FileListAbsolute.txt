@@ -1,0 +1,7 @@
+C:\Users\DB\source\repos\HW7\HW7\bin\Debug\HW7.exe.config
+C:\Users\DB\source\repos\HW7\HW7\bin\Debug\HW7.exe
+C:\Users\DB\source\repos\HW7\HW7\bin\Debug\HW7.pdb
+C:\Users\DB\source\repos\HW7\HW7\obj\Debug\HW7.csprojAssemblyReference.cache
+C:\Users\DB\source\repos\HW7\HW7\obj\Debug\HW7.csproj.CoreCompileInputs.cache
+C:\Users\DB\source\repos\HW7\HW7\obj\Debug\HW7.exe
+C:\Users\DB\source\repos\HW7\HW7\obj\Debug\HW7.pdb
